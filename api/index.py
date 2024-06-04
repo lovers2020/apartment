@@ -334,4 +334,4 @@ def update_trade_info():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
