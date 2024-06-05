@@ -87,7 +87,13 @@ with app.app_context():
     db.create_all()
 
 # 최초 1회만 실행
-connection = psycopg2.connect("apartment_db_kx9l")
+connection = psycopg2.connect(
+    host="dpg-cpfmi9n109ks73bne8rg-a",
+    dbname="apartment_db_kx9l",
+    user="apartment_db_kx9l_user",
+    password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
+    port="5432",
+)
 
 cur = connection.cursor()
 
