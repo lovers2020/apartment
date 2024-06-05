@@ -5,6 +5,7 @@ import requests
 import psycopg2
 from flask_sqlalchemy import SQLAlchemy
 import config
+from concurrent.futures import ProcessPoolExecutor
 
 app = Flask(__name__)
 
@@ -332,3 +333,9 @@ def update_trade_info():
 
         return jsonify(parent_codes)
     return jsonify({"errors": "parameter required (year, month)"})
+
+
+_list = ["1", "11", "111", "1111", "11111", "111111"]
+
+pool = ProcessPoolExecutor(max_workers=4)
+pool.map(update_trade_info, _list)
