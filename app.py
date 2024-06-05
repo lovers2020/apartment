@@ -97,7 +97,7 @@ connection = psycopg2.connect(
 )
 
 cur = connection.cursor()
-cur.execute('SET statement_timeout VALUES = "10min"')
+cur.execute('SET statement_timeout VALUES "10min"')
 # file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
 # for i in file:
 #     cur.execute(i)
