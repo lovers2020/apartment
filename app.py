@@ -335,10 +335,10 @@ def update_trade_info():
     return jsonify({"errors": "parameter required (year, month)"})
 
 
-_list = ["1", "11", "111", "1111", "11111", "111111"]
+# _list = ["1", "11", "111", "1111", "11111", "111111"]
 
-pool = ProcessPoolExecutor(max_workers=4)
-pool.map(update_trade_info, _list)
+# pool = ProcessPoolExecutor(max_workers=4)
+# pool.map(update_trade_info, _list)
 
 
 # if __name__ == "__main__":
