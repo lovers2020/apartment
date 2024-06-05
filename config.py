@@ -4,7 +4,8 @@ import os
 class Config:
     BASE_DIR = os.path.dirname(__file__)
     dbfile = os.path.join(BASE_DIR, "real_estate_trade_price.sqlite3")
-    SQLALCHEMY_DATABASE_URI = "sqlite:///" + dbfile
+    # SQLALCHEMY_DATABASE_URI = "sqlite:///" + dbfile
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     # SQLALCHEMY_DATABASE_URI = "mysql+pymysql:///{}".format(
     #     os.path.join(BASE_DIR, "real_estate_trade_price.db")
     # )
