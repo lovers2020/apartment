@@ -1,6 +1,6 @@
 {
     "DEFAULT": {
-        "SQLALCHEMY_DATABASE_URI": "sqlite:///c:/Users/Lovers2019/Documents/GitHub/apartment/real_estate_trade_price.sqlite3",
+        "SQLALCHEMY_DATABASE_URI": "postgresql://apartment_db_kx9l_user:OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT@dpg-cpfmi9n109ks73bne8rg-a/apartment_db_kx9l",
         "SQLALCHEMY_ECHO": true,
         "SQLALCHEMY_TRACK_MODIFICATIONS": true,
         "SECRET_KEY": "ads91230789137yasuhd!@#!@4234",

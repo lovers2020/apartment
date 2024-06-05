@@ -2,7 +2,7 @@ import json
 from flask import Flask, render_template, jsonify, request
 from xml.etree import ElementTree as ET
 import requests
-import sqlite3
+import psycopg2
 from flask_sqlalchemy import SQLAlchemy
 import config
 
@@ -87,7 +87,7 @@ with app.app_context():
     db.create_all()
 
 # 최초 1회만 실행
-connection = sqlite3.connect("apartment_db_kx9l")
+connection = psycopg2.connect("apartment_db_kx9l")
 
 cur = connection.cursor()
 
