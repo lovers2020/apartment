@@ -87,22 +87,22 @@ with app.app_context():
     db.create_all()
 
 # 최초 1회만 실행
-# connection = sqlite3.connect("real_estate_trade_price.sqlite3")
+connection = sqlite3.connect("apartment_db_kx9l")
 
-# cur = connection.cursor()
+cur = connection.cursor()
 
-# file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
-# for i in file:
-#     cur.execute(i)
+file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
+for i in file:
+    cur.execute(i)
 
 
-# select_all = "SELECT * FROM address_codes"
-# rows = cur.execute(select_all).fetchall()
+select_all = "SELECT * FROM address_codes"
+rows = cur.execute(select_all).fetchall()
 
-# # for r in rows:
-# #     print(r)
-# connection.commit()
-# connection.close()
+# for r in rows:
+#     print(r)
+connection.commit()
+connection.close()
 
 
 # Test로 입력한 데이터 제거
