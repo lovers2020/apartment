@@ -339,3 +339,8 @@ _list = ["1", "11", "111", "1111", "11111", "111111"]
 
 pool = ProcessPoolExecutor(max_workers=4)
 pool.map(update_trade_info, _list)
+
+
+if __name__ == "__main__":
+    pool = ProcessPoolExecutor(max_workers=4)
+    pool.map(update_trade_info, _list)
