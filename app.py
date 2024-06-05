@@ -88,34 +88,23 @@ with app.app_context():
     db.create_all()
 
 # 최초 1회만 실행
-# connection = psycopg2.connect(
-#     host="dpg-cpfmi9n109ks73bne8rg-a",
-#     dbname="apartment_db_kx9l",
-#     user="apartment_db_kx9l_user",
-#     password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
-#     port="5432",
-# )
+connection = psycopg2.connect(
+    host="dpg-cpfmi9n109ks73bne8rg-a",
+    dbname="apartment_db_kx9l",
+    user="apartment_db_kx9l_user",
+    password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
+    port="5432",
+)
 
-# cur = connection.cursor()
-
+cur = connection.cursor()
+cur.execute("SET statement_timeout=?", ("10min"))
 # file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
 # for i in file:
 #     cur.execute(i)
 
 
-# connection.commit()
-# connection.close()
-
-
-# Test로 입력한 데이터 제거
-# connection = sqlite3.connect("real_estate_trade_price.sqlite3")
-
-# cur = connection.cursor()
-# for i in range(105747, 105755):
-#     cur.execute("DELETE FROM trade_info WHERE id=?", (i,))
-
-# connection.commit()
-# connection.close()
+connection.commit()
+connection.close()
 
 
 @app.route("/")
