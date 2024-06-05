@@ -102,11 +102,6 @@ for i in file:
     cur.execute(i)
 
 
-select_all = "SELECT * FROM address_codes"
-rows = cur.execute(select_all).fetchall()
-
-# for r in rows:
-#     print(r)
 connection.commit()
 connection.close()
 
