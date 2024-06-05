@@ -332,7 +332,3 @@ def update_trade_info():
 
         return jsonify(parent_codes)
     return jsonify({"errors": "parameter required (year, month)"})
-
-
-if __name__ == "__main__":
-    
