@@ -317,14 +317,14 @@ def update_trade_info():
                     continue
 
                 db.session.add(trade)
-                try:
-                    db.session.commit()
-                except:
-                    db.session.rollback()
-                    return jsonify({"errors": "commit 실패"})
+            try:
+                db.session.commit()
+            except:
+                db.session.rollback()
+                return jsonify({"errors": "commit 실패"})
 
         return jsonify(parent_codes)
-    
+
     return jsonify({"errors": "parameter required (year, month)"})
 
 
