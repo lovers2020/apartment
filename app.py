@@ -97,7 +97,8 @@ connection = psycopg2.connect(
 )
 cur = connection.cursor()
 
-file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
+# file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
+file = open("./resource/주소데이터_추가쿼리.sql", encoding="utf-8")
 for i in file:
     cur.execute(i)
 
