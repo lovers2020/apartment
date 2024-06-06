@@ -95,7 +95,7 @@ connection = psycopg2.connect(
     password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
     port="5432",
 )
-
+cur = connection.cursor()
 
 file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
 for i in file:
