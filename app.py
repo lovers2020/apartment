@@ -120,7 +120,8 @@ data = [
     ("2671025933", "부산광역시 기장군 일광읍 용천리", "26710"),
 ]
 cur.executemany(
-    "INSERT INTO address_codes(code, address_name, parent_code) VALUES(?, ?, ?)", data
+    "INSERT INTO address_codes(code, address_name, parent_code) VALUES(%s, %s, %s)",
+    data,
 )
 
 connection.commit()
