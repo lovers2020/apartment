@@ -101,10 +101,12 @@ connection = psycopg2.connect(
 # for i in file:
 #     cur.execute(i)
 
-# cur = connection.cursor()
+cur = connection.cursor()
 # cur.execute("DELETE FROM trade_info")
 
+
 data = [
+    ("4122012800", "경기도 평택시 고덕동", "41220"),
     ("4161011500", "경기도 광주시 신현동", "41610"),
     ("4161011600", "경기도 광주시 능평동", "41610"),
     ("4161011700", "경기도 광주시 문형동", "41610"),
