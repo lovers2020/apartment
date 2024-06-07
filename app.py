@@ -95,7 +95,8 @@ connection = psycopg2.connect(
     port="5432",
 )
 cur = connection.cursor()
-cur.excute("DELETE FROM trade_info")
+cur.execute("DELETE FROM trade_info")
+
 
 ## file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
 

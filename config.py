@@ -4,15 +4,10 @@ import os
 class Config:
     BASE_DIR = os.path.dirname(__file__)
     dbfile = os.path.join(BASE_DIR, "real_estate_trade_price.sqlite3")
+    # 아래는 Local Test용 DB
     # SQLALCHEMY_DATABASE_URI = "sqlite:///" + dbfile
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    # SQLALCHEMY_DATABASE_URI = "mysql+pymysql:///{}".format(
-    #     os.path.join(BASE_DIR, "real_estate_trade_price.db")
-    # )
-    # SQLALCHEMY_DATABASE_URI = (
-    #     "mysql+pymysql://root:1234@localhost:3306/real_estate_trade_price"
-    # )
-    # postgres://apartment_db_kx9l_user:OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT@dpg-cpfmi9n109ks73bne8rg-a/apartment_db_kx9l
+
     print(SQLALCHEMY_DATABASE_URI)
 
     SQLALCHEMY_ECHO = False
