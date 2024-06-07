@@ -1,6 +1,6 @@
 INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025900', '부산광역시 기장군 일광읍', '26710');
 INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025921', '부산광역시 기장군 일광읍 삼성리', '26710');
-INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025922', '부산광역시 기장군 일광읍 이천리', '26710';)
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025922', '부산광역시 기장군 일광읍 이천리', '26710');
 INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025923', '부산광역시 기장군 일광읍 학리', '26710');
 INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025924', '부산광역시 기장군 일광읍 동백리', '26710');
 INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025925', '부산광역시 기장군 일광읍 문중리', '26710');
