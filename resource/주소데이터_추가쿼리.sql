@@ -13,3 +13,19 @@ INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025931', 
 INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025932', '부산광역시 기장군 일광읍 횡계리', '26710');
 INSERT INTO address_codes(code, address_name, parent_code) VALUES('2671025933', '부산광역시 기장군 일광읍 용천리', '26710');
 
+
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4161011400', '경기도 광주시 고산동', '41610');
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4161011500', '경기도 광주시 신현동', '41610');
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4161011600', '경기도 광주시 능평동', '41610');
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4161011300', '경기도 광주시 문형동', '41610');
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4161011800', '경기도 광주시 추자동', '41610');
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4161011900', '경기도 광주시 매산동', '41610');
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4161012000', '경기도 광주시 양벌동', '41610');
+
+4161011400	경기도 광주시 고산동	존재
+4161011500	경기도 광주시 신현동	존재
+4161011600	경기도 광주시 능평동	존재
+4161011700	경기도 광주시 문형동	존재
+4161011800	경기도 광주시 추자동	존재
+4161011900	경기도 광주시 매산동	존재
+4161012000	경기도 광주시 양벌동	존재
