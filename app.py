@@ -23,8 +23,6 @@ class AddressInfo(db.Model):
     parent_code = db.Column(db.String(5))
     updated_at = db.Column(db.DateTime, server_default=db.func.now())
 
-    price_info = db.relationship("TradeInfo", backref="address_codes", lazy=True)
-
     def __repr__(self):
         return "code = %s, name = %s, parent_code=%s, updated_at = %s" % (
             self.code,
@@ -89,14 +87,23 @@ with app.app_context():
     db.create_all()
 
 # 최초 1회만 실행
-# connection = psycopg2.connect(
-#     host="dpg-cpfmi9n109ks73bne8rg-a",
-#     dbname="apartment_db_kx9l",
-#     user="apartment_db_kx9l_user",
-#     password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
-#     port="5432",
-# )
-# cur = connection.cursor()
+connection = psycopg2.connect(
+    host="dpg-cpfmi9n109ks73bne8rg-a",
+    dbname="apartment_db_kx9l",
+    user="apartment_db_kx9l_user",
+    password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
+    port="5432",
+)
+cur = connection.cursor()
+cur.excute("DELETE FROM trade_info")
+
+## file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
+
+# for i in file:
+#     cur.execute(i)
+connection.commit()
+connection.close()
+
 
 # data = [
 #     ("4161011500", "경기도 광주시 신현동", "41610"),
@@ -110,17 +117,6 @@ with app.app_context():
 #     "INSERT INTO address_codes(code, address_name, parent_code) VALUES(%s, %s, %s)",
 #     data,
 # )
-
-# connection.commit()
-# connection.close()
-
-## file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
-# file = open("./resource/주소데이터_추가쿼리.sql", encoding="utf-8")
-
-# for i in file:
-#     cur.execute(i)
-# # file = Path("resource/주소데이터_추가쿼리.sql").read_text(encoding="utf-8")
-# # divide_file = file.split(sep=";")
 
 
 @app.route("/")
