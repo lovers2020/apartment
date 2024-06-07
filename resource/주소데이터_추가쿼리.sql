@@ -1,5 +1,1 @@
-INSERT INTO address_codes(code, address_name, parent_code) VALUES('3171026521', '울산광역시 울주군 삼남읍 교동리', '31710')
-INSERT INTO address_codes(code, address_name, parent_code) VALUES('3171026522', '울산광역시 울주군 삼남읍 상천리', '31710')
-INSERT INTO address_codes(code, address_name, parent_code) VALUES('3171026523', '울산광역시 울주군 삼남읍 신화리', '31710')
-INSERT INTO address_codes(code, address_name, parent_code) VALUES('3171026524', '울산광역시 울주군 삼남읍 방기리', '31710')
-INSERT INTO address_codes(code, address_name, parent_code) VALUES('3171026525', '울산광역시 울주군 삼남읍 가천리', '31710')
+INSERT INTO address_codes(code, address_name, parent_code) VALUES('4139013500', '경기도 시흥시 배곧동', '41390')
