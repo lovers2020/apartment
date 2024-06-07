@@ -89,36 +89,36 @@ with app.app_context():
     db.create_all()
 
 # 최초 1회만 실행
-connection = psycopg2.connect(
-    host="dpg-cpfmi9n109ks73bne8rg-a",
-    dbname="apartment_db_kx9l",
-    user="apartment_db_kx9l_user",
-    password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
-    port="5432",
-)
-cur = connection.cursor()
+# connection = psycopg2.connect(
+#     host="dpg-cpfmi9n109ks73bne8rg-a",
+#     dbname="apartment_db_kx9l",
+#     user="apartment_db_kx9l_user",
+#     password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
+#     port="5432",
+# )
+# cur = connection.cursor()
 
-## file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
-# file = open("./resource/주소데이터_추가쿼리.sql", encoding="utf-8")
+# ## file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
+# # file = open("./resource/주소데이터_추가쿼리.sql", encoding="utf-8")
 
-# for i in file:
-#     cur.execute(i)
-data = [
-    ("4161011400", "경기도 광주시 고산동", "41610"),
-    ("4161011500", "경기도 광주시 신현동", "41610"),
-    ("4161011600", "경기도 광주시 능평동", "41610"),
-    ("4161011300", "경기도 광주시 문형동", "41610"),
-    ("4161011800", "경기도 광주시 추자동", "41610"),
-    ("4161011900", "경기도 광주시 매산동", "41610"),
-    ("4161012000", "경기도 광주시 양벌동", "41610"),
-]
-cur.executemany(
-    "INSERT INTO address_codes(code, address_name, parent_code) VALUES(%s, %s, %s)",
-    data,
-)
+# # for i in file:
+# #     cur.execute(i)
+# data = [
+#     ("4161011400", "경기도 광주시 고산동", "41610"),
+#     ("4161011500", "경기도 광주시 신현동", "41610"),
+#     ("4161011600", "경기도 광주시 능평동", "41610"),
+#     ("4161011300", "경기도 광주시 문형동", "41610"),
+#     ("4161011800", "경기도 광주시 추자동", "41610"),
+#     ("4161011900", "경기도 광주시 매산동", "41610"),
+#     ("4161012000", "경기도 광주시 양벌동", "41610"),
+# ]
+# cur.executemany(
+#     "INSERT INTO address_codes(code, address_name, parent_code) VALUES(%s, %s, %s)",
+#     data,
+# )
 
-connection.commit()
-connection.close()
+# connection.commit()
+# connection.close()
 
 # # file = Path("resource/주소데이터_추가쿼리.sql").read_text(encoding="utf-8")
 # # divide_file = file.split(sep=";")
