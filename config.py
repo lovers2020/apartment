@@ -6,7 +6,7 @@ class Config:
     dbfile = os.path.join(BASE_DIR, "real_estate_trade_price.sqlite3")
     # 아래는 Local Test용 DB
     # SQLALCHEMY_DATABASE_URI = "sqlite:///" + dbfile
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") + "?sslmode=disable"
 
     print(SQLALCHEMY_DATABASE_URI)
 

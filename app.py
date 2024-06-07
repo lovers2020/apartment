@@ -87,24 +87,24 @@ with app.app_context():
     db.create_all()
 
 # 최초 1회만 실행
-connection = psycopg2.connect(
-    host="dpg-cpfmi9n109ks73bne8rg-a",
-    dbname="apartment_db_kx9l",
-    user="apartment_db_kx9l_user",
-    password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
-    port="5432",
-)
-cur = connection.cursor()
-cur.execute("DELETE FROM trade_info")
+# connection = psycopg2.connect(
+#     host="dpg-cpfmi9n109ks73bne8rg-a",
+#     dbname="apartment_db_kx9l",
+#     user="apartment_db_kx9l_user",
+#     password="OE3vQp19JOsVSQsUHz5TNRvbQbgJaIvT",
+#     port="5432",
+# )
 
 
 ## file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
 
 # for i in file:
 #     cur.execute(i)
-connection.commit()
-connection.close()
+# connection.commit()
+# connection.close()
 
+# cur = connection.cursor()
+# cur.execute("DELETE FROM trade_info")
 
 # data = [
 #     ("4161011500", "경기도 광주시 신현동", "41610"),
