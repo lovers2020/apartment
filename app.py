@@ -100,7 +100,7 @@ cur = connection.cursor()
 
 # file = open("./resource/주소데이터_업데이트쿼리.sql", encoding="utf-8")
 file = Path("./resource/주소데이터_추가쿼리.sql").read_text(encoding="utf-8")
-devide_file = file.split(spe=";")
+devide_file = file.split(sep=";")
 for i in devide_file:
     cur.execute(i)
 
