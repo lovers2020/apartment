@@ -100,24 +100,25 @@ connection = psycopg2.connect(
 
 # for i in file:
 #     cur.execute(i)
-connection.commit()
-connection.close()
 
 # cur = connection.cursor()
 # cur.execute("DELETE FROM trade_info")
 
-# data = [
-#     ("4161011500", "경기도 광주시 신현동", "41610"),
-#     ("4161011600", "경기도 광주시 능평동", "41610"),
-#     ("4161011700", "경기도 광주시 문형동", "41610"),
-#     ("4161011800", "경기도 광주시 추자동", "41610"),
-#     ("4161011900", "경기도 광주시 매산동", "41610"),
-#     ("4161012000", "경기도 광주시 양벌동", "41610"),
-# ]
-# cur.executemany(
-#     "INSERT INTO address_codes(code, address_name, parent_code) VALUES(%s, %s, %s)",
-#     data,
-# )
+data = [
+    ("4161011500", "경기도 광주시 신현동", "41610"),
+    ("4161011600", "경기도 광주시 능평동", "41610"),
+    ("4161011700", "경기도 광주시 문형동", "41610"),
+    ("4161011800", "경기도 광주시 추자동", "41610"),
+    ("4161011900", "경기도 광주시 매산동", "41610"),
+    ("4161012000", "경기도 광주시 양벌동", "41610"),
+]
+cur.executemany(
+    "INSERT INTO address_codes(code, address_name, parent_code) VALUES(%s, %s, %s)",
+    data,
+)
+
+connection.commit()
+connection.close()
 
 
 @app.route("/")
